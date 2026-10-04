@@ -127,25 +127,78 @@ h3 {
   font-weight: 500;
 }
 .hero h1 {
-  font-size: clamp(42px, 7.8vw, 104px);
-  font-weight: 600;
   margin: 26px 0 25px;
-  white-space: nowrap;
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 1.15em;
 }
-.typed-name {
-  display: inline-block;
+/* The name, written out like a signature. The letter shapes are outlines of the Ms Madi font (SIL Open Font
+   Licence). Each letter is a thick stroke run along its own outline and clipped to the letter, so the ink
+   appears where a pen would be; the letter's fill then takes over. With no animation the name simply shows. */
+.signature {
+  width: min(86vw, 780px);
+  height: auto;
 }
-.caret {
-  height: 0.8em;
-  width: 2px;
-  background: #bca6ea;
-  margin-left: 8px;
-  animation: blink 1s steps(1) infinite;
+.signature g path {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 90;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  animation: sign 1s linear both;
+}
+/* One letter after another. Built by private-backups/signature/build-signature.mjs. */
+.signature g path:nth-of-type(1) {
+  animation-duration: 0.29s;
+  animation-delay: 0.30s;
+}
+.signature g path:nth-of-type(2) {
+  animation-duration: 0.15s;
+  animation-delay: 0.59s;
+}
+.signature g path:nth-of-type(3) {
+  animation-duration: 0.16s;
+  animation-delay: 0.74s;
+}
+.signature g path:nth-of-type(4) {
+  animation-duration: 0.12s;
+  animation-delay: 0.90s;
+}
+.signature g path:nth-of-type(5) {
+  animation-duration: 0.24s;
+  animation-delay: 1.03s;
+}
+.signature g path:nth-of-type(6) {
+  animation-duration: 0.28s;
+  animation-delay: 1.42s;
+}
+.signature g path:nth-of-type(7) {
+  animation-duration: 0.16s;
+  animation-delay: 1.70s;
+}
+.signature g path:nth-of-type(8) {
+  animation-duration: 0.15s;
+  animation-delay: 1.86s;
+}
+.signature g path:nth-of-type(9) {
+  animation-duration: 0.10s;
+  animation-delay: 2.01s;
+}
+.signature g path:nth-of-type(10) {
+  animation-duration: 0.12s;
+  animation-delay: 2.11s;
+}
+.signature g path:nth-of-type(11) {
+  animation-duration: 0.15s;
+  animation-delay: 2.23s;
+}
+.signature g path:nth-of-type(12) {
+  animation-duration: 0.14s;
+  animation-delay: 2.37s;
+}
+.signature g path:nth-of-type(13) {
+  animation-duration: 0.25s;
+  animation-delay: 2.51s;
 }
 .intro {
   font-size: clamp(13px, 1.5vw, 17px);
@@ -686,9 +739,22 @@ h3 {
 .skip:focus {
   top: 15px;
 }
-@keyframes blink {
-  50% {
-    opacity: 0;
+@keyframes sign {
+  from {
+    stroke-dashoffset: 1;
+    stroke-opacity: 0;
+    fill-opacity: 0;
+  }
+  2% {
+    stroke-opacity: 1;
+  }
+  88% {
+    fill-opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+    fill-opacity: 1;
   }
 }
 @keyframes float {
@@ -745,7 +811,6 @@ h3 {
     padding-top: 100px;
   }
   .hero h1 {
-    font-size: clamp(34px, 9vw, 62px);
     margin: 25px 0;
   }
   .intro {
@@ -831,9 +896,6 @@ h3 {
   *:after {
     animation: none !important;
     transition: none !important;
-  }
-  .caret {
-    display: none;
   }
   .skill-track {
     flex-wrap: wrap;

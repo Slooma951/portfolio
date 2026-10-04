@@ -1,16 +1,5 @@
 (() => {
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const name = document.querySelector(".typed-name");
-  if (name && !reduced) {
-    const full = name.textContent;
-    name.textContent = "";
-    let i = 0;
-    const type = () => {
-      name.textContent = full.slice(0, ++i);
-      if (i < full.length) setTimeout(type, 105);
-    };
-    setTimeout(type, 350);
-  }
   const skills = document.querySelector(".skill-track");
   if (skills && !reduced)
     [...skills.children].forEach((el) => {
