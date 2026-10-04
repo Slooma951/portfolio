@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'">
+  <title>Privacy policy | Scribevo</title>
+  <meta name="description" content="What the Scribevo browser extension reads, sends and stores.">
+  <link rel="icon" href="mark.png" type="image/png">
+  <link rel="stylesheet" href="scribevo.css">
+</head>
+<body>
+  <header class="wrap"><a class="brand" href="./"><img src="mark.png" alt="">Scribevo</a></header>
+  <main class="wrap">
+    <h1>Privacy policy</h1>
+    <p class="meta">Scribevo browser extension, version 2.1 · Last updated 4 October 2026</p>
+    <p class="lead">Scribevo is a free writing assistant for people with dyslexia. It has no accounts, no adverts and no analytics. This page explains exactly what it reads, what it sends and what it keeps.</p>
+
+    <div class="card">
+      <strong>The short version</strong>
+      <ul>
+        <li>Scribevo sends only the sentence being checked. It never sends the whole page, the web address or your other tabs.</li>
+        <li>That sentence goes to the Scribevo service. <strong>No AI is used unless you turn it on.</strong> By default the sentence is checked against Scribevo's own spelling rules and goes to nobody else.</li>
+        <li>If you switch on <em>Also use AI for harder sentences</em>, the service also sends the sentence to <strong>Groq Inc. (United States)</strong> for the AI step.</li>
+        <li>Scribevo keeps none of your writing on its servers.</li>
+        <li>It never reads password, card, security-code, email or phone fields.</li>
+      </ul>
+    </div>
+
+    <h2>What Scribevo reads</h2>
+    <p>Scribevo only reads text from a field when it is about to check it. That happens either because you asked (the floating button, <kbd>Alt</kbd>+<kbd>W</kbd>, or the right-click menu), or because auto-suggest is on and you paused typing.</p>
+    <p>It never reads:</p>
+    <ul>
+      <li>password fields, including ones temporarily shown as plain text</li>
+      <li>card number, expiry and security-code fields</li>
+      <li>one-time codes and two-factor authentication inputs</li>
+      <li>email address and telephone number fields</li>
+      <li>fields labelled as secrets, PINs, bank details, national ID numbers or medical information</li>
+      <li>fields a website has marked as private (<code>data-scribevo="off"</code>, <code>data-private</code> or <code>data-sensitive</code>)</li>
+    </ul>
+    <p>Scribevo does not run at all on browser-internal pages, local files, sign-in pages (such as Google and Microsoft account pages), password-manager vaults or banking websites. When it can't tell what a field is for, it leaves it alone.</p>
+
+    <h2>What is sent, and to whom</h2>
+    <p>When Scribevo checks your writing, it sends <strong>only that sentence</strong> over an encrypted (HTTPS) connection to the Scribevo correction service. No cookies or identifiers are sent with it.</p>
+    <p><strong>By default, no AI.</strong> The service applies its own spelling rules and replies. The sentence is not sent to Groq or to any other AI model.</p>
+    <p><strong>If you switch on <em>Also use AI for harder sentences</em></strong> in Scribevo's settings, the service applies its rules and then sends the sentence to <strong>Groq Inc., in the United States</strong>, which runs an AI language model to catch more grammar and tense errors. Groq's own terms govern how they handle requests. You can switch it off again at any time.</p>
+    <p>If you would rather nothing was sent automatically, turn off <em>Auto-suggest while typing</em> in Scribevo's settings. Scribevo will then only check text when you ask it to.</p>
+    <p>Scribevo never sends your browsing history, the pages you visit, the web address you are on, or your settings.</p>
+
+    <h2>What is stored</h2>
+    <ul>
+      <li><strong>On our servers: none of your writing.</strong> Service logs record only technical details: a random request number, how many characters and words were checked, whether a change was suggested, how long it took, and whether there was an error. The logging system is built so that it cannot record your text.</li>
+      <li><strong>On your device:</strong> your Scribevo settings and your list of sites where Scribevo is switched off. These are kept in Chrome's extension storage. If you have Chrome sync turned on, Chrome syncs these settings between your own devices through your Google account.</li>
+    </ul>
+    <p>There is no database of users, no account, no advertising identifier and no analytics.</p>
+
+    <h2>Training AI models</h2>
+    <p>We do not keep your writing, so we never use it to train anything.</p>
+
+    <h2>Your controls</h2>
+    <ul>
+      <li>Turn Scribevo off for a single website, or pause it everywhere, from its settings.</li>
+      <li>AI stays off unless you switch on <em>Also use AI for harder sentences</em>.</li>
+      <li>Turn off auto-suggest so text is only checked when you ask.</li>
+      <li>Nothing in your writing changes until you accept a suggestion.</li>
+      <li>Uninstalling Scribevo removes it and everything it stored in your browser.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>Scribevo does not ask for or collect personal information from anyone. Students under 16 should use it with the agreement of a parent, guardian or their school.</p>
+
+    <h2>Your rights and contact</h2>
+    <p>Scribevo is made by Salem Elatrash in Dublin, Ireland. Because Scribevo keeps no writing and no accounts, there is normally no personal data held about you. If you have any question about privacy, or want to use your rights under the GDPR, email <a href="mailto:salem.elatrash@outlook.com">salem.elatrash@outlook.com</a>. You can also complain to Ireland's Data Protection Commission at <a href="https://www.dataprotection.ie/">dataprotection.ie</a>.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the new version will be posted here with a new date. If a change affects what Scribevo sends or to whom, it will also be noted in the extension's release notes.</p>
+    <p>4 October 2026, version 2.1: AI is now off unless you turn it on. In version 2.0, every checked sentence was also sent to Groq.</p>
+  </main>
+  <footer class="wrap">Scribevo · <a href="./">About</a> · <a href="https://chromewebstore.google.com/detail/pfpakhloamdgoiokaljdfhpgkbanccci">Chrome Web Store</a></footer>
+</body>
+</html>

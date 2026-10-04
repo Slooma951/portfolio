@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <title>Reunio | Salem Elatrash</title>
+    <meta
+      name="description"
+      content="A lost-property app for front desks, from logging to checked returns."
+    />
+    <link
+      rel="canonical"
+      href="https://slooma951.github.io/portfolio/case-studies/reunio.html"
+    />
+    <meta property="og:title" content="Reunio" />
+    <meta
+      property="og:description"
+      content="A lost-property app for front desks, from logging to checked returns."
+    />
+    <meta
+      property="og:image"
+      content="https://slooma951.github.io/portfolio/assets/social.png"
+    />
+    <meta
+      property="og:url"
+      content="https://slooma951.github.io/portfolio/case-studies/reunio.html"
+    />
+    <link rel="icon" href="../favicon.svg" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <script src="../js/theme.js"></script>
+  </head>
+  <body>
+    <main class="reading">
+      <a class="back" href="../index.html#work">← Back to portfolio</a>
+      <p class="eyebrow">Salem Elatrash / Reunio</p>
+      <h1>Reunio</h1>
+      <p class="intro">
+        A lost-property app for college and venue front desks. Keep found items
+        organised and help staff reunite them with their owners.
+      </p>
+      <div class="actions">
+        <a
+          class="button primary"
+          href="https://slooma951.github.io/reunio-demo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Try demo ↗</a
+        >
+        <a
+          class="button"
+          href="https://github.com/Slooma951/Reunio"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Public project overview</a
+        >
+      </div>
+      <p>
+        Open the demo and choose “Load example items to try it out” to explore
+        the workflow.
+      </p>
+      <figure>
+        <img
+          class="diagram"
+          src="../assets/reunio-preview.png"
+          alt="Reunio demo: the app in a phone frame, showing a shelf of sample lost-property items"
+        />
+        <figcaption>
+          Screenshot of the live demo with built-in example records, no real
+          owner information.
+        </figcaption>
+      </figure>
+      <section id="project-evidence" class="project-evidence">
+        <p class="eyebrow">Inspect the engineering</p>
+        <h2>Project evidence</h2>
+        <p>
+          TypeScript shelf search, with selected source code, a runnable example
+          and tests.
+        </p>
+        <div class="evidence-grid">
+          <a
+            href="https://github.com/Slooma951/Reunio/tree/main/examples"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="evidence-label">Output</span
+            ><strong>Run the example ↗</strong
+            ><span
+              >Inspect the selected code and compare its result with the saved
+              JSON output.</span
+            ></a
+          >
+          <a
+            href="https://github.com/Slooma951/Reunio/tree/main/evidence#methodology"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="evidence-label">Methodology</span
+            ><strong>Read the decisions ↗</strong
+            ><span
+              >Source provenance, adaptations and the reasoning behind the
+              example.</span
+            ></a
+          >
+          <a
+            href="https://github.com/Slooma951/Reunio/tree/main/evidence#testing-results"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="evidence-label">Testing results</span
+            ><strong>8 example tests pass ↗</strong
+            ><span
+              >Checked 4 October 2026. Test cases, rerun commands and
+              verification record.</span
+            ></a
+          >
+        </div>
+        <p>
+          The selected search function applies shelf status, recognises
+          references and requires search words to match one item. The runnable
+          output uses invented records.
+        </p>
+        <p class="evidence-limit">
+          The full matching engine and owner records remain private. No desk
+          pilot or measured return-rate improvement is claimed.
+        </p>
+      </section>
+      <h2>The problem</h2>
+      <p>
+        A found item can sit at a desk while its owner asks somewhere else.
+        Paper notes and scattered messages make it harder to connect the two.
+        Reunio brings item records and lost reports into one place.
+      </p>
+      <section id="why-this-matters-now">
+        <h2>Why this matters now</h2>
+        <p>
+          Nearly 19,000 items reached Dublin Airport lost property in 2024; 56%
+          were returned to their owners. That leaves about 44%, over 8,000
+          items, not returned. The latter figures are approximate calculations
+          from the reported totals.
+          <a
+            href="https://www.irishpost.com/news/hundreds-of-wedding-and-engagement-rings-found-in-airports-lost-property-283322"
+            >daa, reported by The Irish Post, December 2024</a
+          >.
+        </p>
+        <p>
+          Transport for London receives about 6,000 lost items each week, and
+          fewer than one in five is reclaimed. After three months, unclaimed
+          items go to charity or auction.
+          <a
+            href="https://www.easterneye.biz/transport-for-london-lost-property/"
+            >TfL figures reported by Eastern Eye</a
+          >.
+          <a
+            href="https://tfl.gov.uk/corporate/transparency/freedom-of-information/foi-request-detail?referenceId=FOI-2488-2425"
+            >TfL, lost-property disposal</a
+          >.
+        </p>
+        <p>
+          Dublin Bus, Irish Rail and Luas keep lost property for a maximum of 30
+          days.
+          <a href="https://www.transportforireland.ie/support/lost-property/"
+            >Transport for Ireland</a
+          >.
+          <a
+            href="https://www.transportforireland.ie/support/lost-property-information/"
+            >Transport for Ireland, holding period</a
+          >.
+        </p>
+        <p>
+          In May 2026, a Dublin college student hub told students it held over
+          100 items, all recorded on a spreadsheet. Source: the student
+          hub&#x27;s email to students, supplied by the project author. The
+          college and private email are not published here.
+        </p>
+        <p>
+          The problem Reunio addresses is often a missed connection: an item is
+          already there, but its owner asks at the wrong desk or on the wrong
+          day. A notebook or spreadsheet holds the record, and the holding
+          period can end before the owner finds it.
+        </p>
+        <p>
+          Reunio gives each found item a tag number and a record in about 20
+          seconds; a photo can help fill in what it is. Lost reports are matched
+          against the shelf with reasons shown. Staff check ownership before a
+          return, and the desk can track items logged, items returned and time
+          to return.
+        </p>
+        <p>
+          No desk has used Reunio yet, so it has no measured return rate. A free
+          pilot is how that would be measured. There is no evidence yet that
+          Reunio raises return rates.
+        </p>
+      </section>
+      <h2>How it works</h2>
+      <ol>
+        <li>
+          <strong>Log a found item.</strong> Record its kind, colour, location
+          and useful details. Give it a reference for its tag.
+        </li>
+        <li>
+          <strong>Take a lost report.</strong> Capture what the owner remembers
+          and review suggested matches with the reasons behind them.
+        </li>
+        <li>
+          <strong>Check before returning.</strong> Staff confirm ownership and
+          record the handover. A suggested match does not release an item
+          automatically.
+        </li>
+      </ol>
+      <h2>What I built</h2>
+      <p>
+        A React Native and Expo app with a searchable shelf, item logging, lost
+        reports and desk settings. Item histories and return steps help staff
+        follow what happened. The web preview supports local image suggestions
+        for logging, with manual entry available when a suggestion is uncertain.
+      </p>
+      <h2>Engineering choices</h2>
+      <p>
+        The interface gives staff a short path from logging to review. Matching
+        explanations keep the decision understandable. Records are kept on the
+        device in this prototype, and retention controls help a desk manage
+        stored information.
+      </p>
+      <h2>Current stage</h2>
+      <p>
+        Reunio is a working prototype. It has not yet been used in a live
+        front-desk pilot. The screenshots use example data, and real-world
+        reliability, shared-desk operation and deployment still need evaluation.
+      </p>
+      <h2>Why it matters</h2>
+      <p>
+        For students, losing keys, a phone or a bag can interrupt a whole day. A
+        clearer record gives front-desk staff a practical way to help, while
+        keeping ownership checks part of the return.
+      </p>
+      <p>
+        The complete implementation remains private. This page links a selected
+        source example and its tests; owner records are not published.
+      </p>
+    </main>
+    <footer class="wrap footer">
+      <span>© 2026 Salem Elatrash</span>
+      <div>
+        <a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a>
+      </div>
+    </footer>
+  </body>
+</html>

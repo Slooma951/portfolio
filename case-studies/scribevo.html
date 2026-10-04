@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <title>Scribevo | Salem Elatrash</title>
+    <meta
+      name="description"
+      content="Writing support for dyslexic students, from a TU Dublin research project to a published Chrome extension."
+    />
+    <link
+      rel="canonical"
+      href="https://slooma951.github.io/portfolio/case-studies/scribevo.html"
+    />
+    <meta property="og:title" content="Scribevo" />
+    <meta
+      property="og:description"
+      content="Writing support for dyslexic students, from a TU Dublin research project to a published Chrome extension."
+    />
+    <meta
+      property="og:image"
+      content="https://slooma951.github.io/portfolio/assets/social.png"
+    />
+    <meta
+      property="og:url"
+      content="https://slooma951.github.io/portfolio/case-studies/scribevo.html"
+    />
+    <link rel="icon" href="../favicon.svg" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <script src="../js/theme.js"></script>
+  </head>
+  <body>
+    <main class="reading">
+      <a class="back" href="../index.html#work">← Back to portfolio</a>
+      <p class="eyebrow">Salem Elatrash / Scribevo</p>
+      <h1>Scribevo</h1>
+      <p class="intro">
+        Writing help that understands how you spell. A Chrome extension built by
+        Salem Elatrash, beginning with the WordFlow final-year research project
+        at TU Dublin.
+      </p>
+      <div class="actions">
+        <a
+          class="button primary"
+          href="https://chromewebstore.google.com/detail/pfpakhloamdgoiokaljdfhpgkbanccci"
+          >View the published extension ↗</a
+        ><a class="button" href="https://github.com/Slooma951/Scribevo"
+          >Public project overview</a
+        >
+      </div>
+      <figure>
+        <img
+          class="diagram"
+          src="../assets/scribevo-preview.png"
+          alt="Prepared Scribevo product example with a reviewable correction"
+        />
+        <figcaption>
+          Prepared product example showing how a suggestion is reviewed.
+        </figcaption>
+      </figure>
+      <section id="project-evidence" class="project-evidence">
+        <p class="eyebrow">Inspect the engineering</p>
+        <h2>Project evidence</h2>
+        <p>
+          Python evaluation and NumPy analysis, with selected source code, a
+          runnable example and tests.
+        </p>
+        <div class="evidence-grid">
+          <a
+            href="https://github.com/Slooma951/Scribevo/tree/main/examples"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="evidence-label">Output</span
+            ><strong>Run the example ↗</strong
+            ><span
+              >Inspect the selected code and compare its result with the saved
+              JSON output.</span
+            ></a
+          >
+          <a
+            href="https://github.com/Slooma951/Scribevo/tree/main/evidence#methodology"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="evidence-label">Methodology</span
+            ><strong>Read the decisions ↗</strong
+            ><span
+              >Source provenance, adaptations and the reasoning behind the
+              example.</span
+            ></a
+          >
+          <a
+            href="https://github.com/Slooma951/Scribevo/tree/main/evidence#testing-results"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="evidence-label">Testing results</span
+            ><strong>11 example tests pass ↗</strong
+            ><span
+              >Checked 4 October 2026. Test cases, rerun commands and
+              verification record.</span
+            ></a
+          >
+        </div>
+        <p>
+          The selected Python code measures correct, missed and unnecessary
+          edits. A new NumPy companion aggregates synthetic outcome labels. It
+          is separate from the shipped extension and original research model.
+        </p>
+        <p class="evidence-limit">
+          These tests check the public evaluation code, not model accuracy.
+          Product release checks and academic research remain separate evidence
+          below.
+        </p>
+      </section>
+      <h2>The problem</h2>
+      <p>
+        A writer may know what they want to say without knowing the dictionary
+        spelling. Sound-based spellings, missing letters and swapped letters can
+        make ordinary spell-check suggestions unhelpful. For students, that adds
+        another task between an idea and a written assignment.
+      </p>
+      <section id="why-this-matters-now">
+        <h2>Why this matters now</h2>
+        <p>
+          About 1 in 10 people have dyslexia.
+          <a
+            href="https://dyslexia.ie/info-hub/about-dyslexia/what-is-dyslexia/"
+            >Dyslexia Ireland</a
+          >.
+        </p>
+        <p>
+          AHEAD&#x27;s 2023/24 report recorded 22,519 students registered with
+          disability support services in Irish higher education, 8% of students.
+          The largest category was specific learning difficulty, which includes
+          dyslexia: 38.8%, or 8,738 students.
+          <a
+            href="https://www.ahead.ie/userfiles/files/shop/free/AHEAD%20Participation%20Rates%2023-24_digital.pdf"
+            >AHEAD, 2023/24 report</a
+          >.
+        </p>
+        <p>
+          Many of these students rely on Grammarly. It now includes generative
+          AI tools such as a paraphraser, citation finder and AI grader.
+          <a
+            href="https://wonkhe.com/wonk-corner/some-reasonable-adjustments-may-have-just-become-academic-misconduct/"
+            >Wonkhe, October 2025</a
+          >.
+        </p>
+        <p>
+          Some universities now treat Grammarly as generative AI. Since August
+          2024, Notre Dame&#x27;s honour code has included editing tools like
+          Grammarly when a lecturer bans generative AI. A University of North
+          Georgia student was put on academic probation in 2024 after using
+          Grammarly on an essay.
+          <a
+            href="https://www.insidehighered.com/news/tech-innovation/artificial-intelligence/2024/11/26/grammarly-ai-notre-dame-says-yes"
+            >Inside Higher Ed, November 2024</a
+          >.
+          <a
+            href="https://www.fox5atlanta.com/news/grammarly-georgia-college-student-academic-probation-plagiarism-allegations"
+            >FOX 5 Atlanta</a
+          >.
+        </p>
+        <p>
+          This creates a risk for disabled students: a support plan permitting
+          Grammarly may date from its spell-checking role. A student with
+          dyslexia could follow that plan while breaking the AI rules.
+          <a
+            href="https://wonkhe.com/wonk-corner/some-reasonable-adjustments-may-have-just-become-academic-misconduct/"
+            >Wonkhe, October 2025</a
+          >.
+        </p>
+        <p>
+          Scribevo corrects the sentence the writer has already written. It
+          handles dyslexic spellings such as fone, becos and freind, plus
+          apostrophes and common grammar slips. It does not write, paraphrase,
+          add ideas or change the writer&#x27;s style. Nothing changes until the
+          writer accepts the correction. The words stay theirs.
+        </p>
+        <p>
+          From version 2.1.0, Scribevo uses no AI unless the writer turns it
+          on. By default each sentence is checked against Scribevo&#x27;s own
+          spelling rules. An optional setting, “Also use AI for harder
+          sentences”, adds an AI model limited to sentence correction. It stays
+          off until the writer switches it on.
+        </p>
+        <p>
+          The aim is a tool a disability service could name in a student&#x27;s
+          support plan because it corrects rather than generates writing. No
+          university has approved Scribevo yet.
+        </p>
+        <p>
+          Project check, 4 October 2026: live on the Chrome Web Store at version
+          2.1.0; 248 backend and 69 extension tests pass.
+        </p>
+      </section>
+      <h2>What Scribevo does</h2>
+      <p>
+        Scribevo checks a sentence in context and presents a suggestion. The
+        writer can accept it or dismiss it. The interface avoids a page full of
+        red underlines and gives the person control over the edit.
+      </p>
+      <pre>
+Illustrative example
+You type:          i realy wnt to fon my freind
+Scribevo suggests: I really want to phone my friend.</pre>
+      <p>
+        It supports phonetic spellings, missing or swapped letters, apostrophes
+        and some grammar errors. A dictionary can be searched using the spelling
+        a person knows. Site-level controls let the writer pause assistance.
+      </p>
+      <img
+        class="diagram"
+        src="../assets/scribevo-flow.svg"
+        alt="Four steps: write a sentence, ask for support, review the suggestion, then accept or dismiss it."
+      />
+      <h2>My work</h2>
+      <p>
+        I developed the WordFlow research prototype, prepared a 6,571-pair
+        training dataset and worked with a T5-based model using PyTorch and
+        Hugging Face Transformers. I connected the research to a JavaScript
+        browser extension and a Python FastAPI service. Four participant
+        sessions informed the prototype's evaluation and interface work.
+      </p>
+      <p>
+        The project later developed into Scribevo. The current product uses
+        spelling rules, with an optional AI-assisted correction stage that is
+        off by default. The historical T5 prototype
+        and the current product are different versions; results from one should
+        not be presented as results for the other.
+      </p>
+      <h2>Evidence, with the limits attached</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Evidence</th>
+            <th scope="col">What it tells us</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Published product</td>
+            <td>
+              Project check, 4 October 2026: Scribevo version 2.1.0 is live on
+              the Chrome Web Store.
+            </td>
+          </tr>
+          <tr>
+            <td>Reported automated checks, 4 October 2026</td>
+            <td>
+              The project check reports 248 backend and 69 extension tests pass.
+              This is evidence about those tests, not proof that every website
+              works.
+            </td>
+          </tr>
+          <tr>
+            <td>Rules-only evaluation</td>
+            <td>
+              70 out of 70 already-correct sentences were preserved. Harmful
+              edits occurred in 3% of a separate 200-example held-out set. The
+              provider-assisted stage was not part of this run.
+            </td>
+          </tr>
+          <tr>
+            <td>Research prototype</td>
+            <td>
+              6,571 training pairs and four participant sessions belong to the
+              original academic work. The original model training and
+              participant work were not rerun in the fresh release check.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Why this is useful for students</h2>
+      <p>
+        The intended benefit is reducing the spelling work needed to express an
+        idea, without taking over the student's writing. Reviewing a suggestion
+        may also help a writer notice the intended spelling. Improved grades,
+        confidence or learning outcomes have not been established by the current
+        evaluation.
+      </p>
+      <h2>Privacy is part of the design</h2>
+      <p>
+        Only the sentence being checked is sent to the Scribevo service. By
+        default it goes no further. If the writer turns on the AI setting, the
+        sentence is also processed by Groq in the United States. No account is
+        required. Cloud processing is a real trade-off: users should read the
+        <a href="../scribevo/privacy.html">product privacy policy</a> before
+        checking sensitive writing.
+      </p>
+      <h2>What still needs work</h2>
+      <p>
+        Context-dependent tense remains difficult. Browser editors vary, and
+        automated checks do not replace testing in each real editor. There is no
+        universal accuracy guarantee. Broader participant evaluation and more
+        editor testing are needed.
+      </p>
+      <h2>Engineering choices</h2>
+      <p>
+        Separate the writing interface from the correction service. Measure
+        harmful edits as well as successful corrections. Keep the suggested
+        change reviewable. These decisions matter because a fluent replacement
+        can still be the wrong replacement.
+      </p>
+      <p>
+        AI coding assistance was used during later engineering and verification
+        work. The research origin, product decisions and evaluation limits are
+        documented separately.
+      </p>
+      <div class="note">
+        <p>
+          This is a public case study. Product source, datasets, trained
+          artefacts, endpoints, credentials and implementation history remain
+          private. Public descriptions cannot prevent someone from independently
+          building a similar idea.
+        </p>
+      </div>
+    </main>
+    <footer class="wrap footer">
+      <span>© 2026 Salem Elatrash</span>
+      <div>
+        <a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a>
+      </div>
+    </footer>
+  </body>
+</html>
