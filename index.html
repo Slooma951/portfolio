@@ -56,10 +56,12 @@
           ><a
             class="button glass"
             href="downloads/Salem_Elatrash_Public_CV.pdf"
-            download
-            >Download CV
+            data-cv
+            >Preview CV
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" /></svg
+              <path
+                d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Zm10-3a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
+              /></svg
           ></a>
         </div>
         <a class="scroll-cue" href="#skills" aria-label="Explore skills"
@@ -236,17 +238,13 @@
                 <a
                   class="project-link view-button"
                   href="case-studies/assistant-s.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View more about Assistant S, opens in a new tab"
-                  >View more <span aria-hidden="true">↗</span></a
+                  aria-label="View more about Assistant S"
+                  >View more <span aria-hidden="true">→</span></a
                 >
                 <a
                   class="code-link"
                   href="https://github.com/Slooma951/Assistant-S-Showcase/tree/main/examples"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Inspect assistant s code and tests, opens in a new tab"
+                  aria-label="Inspect assistant s code and tests"
                   >Inspect code &amp; tests ↗</a
                 >
               </div>
@@ -274,17 +272,13 @@
                 <a
                   class="project-link view-button"
                   href="case-studies/scribevo.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View more about Scribevo, opens in a new tab"
-                  >View more <span aria-hidden="true">↗</span></a
+                  aria-label="View more about Scribevo"
+                  >View more <span aria-hidden="true">→</span></a
                 >
                 <a
                   class="code-link"
                   href="https://github.com/Slooma951/Scribevo/tree/main/examples"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Inspect scribevo code and tests, opens in a new tab"
+                  aria-label="Inspect scribevo code and tests"
                   >Inspect code &amp; tests ↗</a
                 >
               </div>
@@ -311,17 +305,13 @@
                 <a
                   class="project-link view-button"
                   href="case-studies/reunio.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View more about Reunio, opens in a new tab"
-                  >View more <span aria-hidden="true">↗</span></a
+                  aria-label="View more about Reunio"
+                  >View more <span aria-hidden="true">→</span></a
                 >
                 <a
                   class="code-link"
                   href="https://github.com/Slooma951/Reunio/tree/main/examples"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Inspect reunio code and tests, opens in a new tab"
+                  aria-label="Inspect reunio code and tests"
                   >Inspect code &amp; tests ↗</a
                 >
               </div>
@@ -347,10 +337,8 @@
       <footer class="socials">
         <a
           href="https://www.linkedin.com/in/salem-elatrash/"
-          aria-label="Salem Elatrash on LinkedIn, opens in a new tab"
+          aria-label="Salem Elatrash on LinkedIn"
           title="LinkedIn"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path
@@ -360,10 +348,8 @@
         </a>
         <a
           href="https://github.com/Slooma951"
-          aria-label="Salem Elatrash on GitHub, opens in a new tab"
+          aria-label="Salem Elatrash on GitHub"
           title="GitHub"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path
@@ -375,6 +361,29 @@
       <p class="legal">
         <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
       </p>
+      <dialog class="cv-dialog" aria-labelledby="cv-title">
+        <div class="cv-bar">
+          <h2 id="cv-title">Salem Elatrash, CV</h2>
+          <a
+            class="button primary"
+            href="downloads/Salem_Elatrash_Public_CV.pdf"
+            download
+            >Download CV
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" /></svg
+          ></a>
+          <button class="button glass" type="button" data-close>Close</button>
+        </div>
+        <div class="cv-page">
+          <img
+            src="downloads/Salem_Elatrash_Public_CV.png"
+            alt="Salem Elatrash's one-page CV. Download the PDF to read it with a screen reader or to select the text."
+            width="1654"
+            height="2339"
+            loading="lazy"
+          />
+        </div>
+      </dialog>
     </main>
   </body>
 </html>

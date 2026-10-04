@@ -19,6 +19,18 @@
       clone.setAttribute("aria-hidden", "true");
       skills.appendChild(clone);
     });
+  // "Preview CV" opens the CV in a popup with Download and Close. Without this script the link just opens the PDF.
+  const cv = document.querySelector(".cv-dialog");
+  if (cv && cv.showModal) {
+    document.querySelector("[data-cv]").addEventListener("click", (e) => {
+      e.preventDefault();
+      cv.showModal();
+    });
+    // Close from the button, or by clicking the dark area outside the popup. Escape already closes it.
+    cv.addEventListener("click", (e) => {
+      if (e.target === cv || e.target.closest("[data-close]")) cv.close();
+    });
+  }
   const slider = document.querySelector(".project-slider"),
     track = document.querySelector(".project-track");
   if (!slider || !track) return;
