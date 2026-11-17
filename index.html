@@ -3,70 +3,279 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-  <title>Salem Elatrash | Portfolio Website</title>
-  <meta name="description" content="Software engineering, applied AI and data projects by Salem Elatrash. Computing graduate and MSc Data Analytics student in Dublin.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Salem Elatrash | Software, AI and data</title>
+  <meta name="description" content="Salem Elatrash builds AI software people can talk to, study with and write with. Computing graduate (TU Dublin) and MSc Data Analytics student (NCI), Dublin.">
   <link rel="canonical" href="https://slooma951.github.io/portfolio/">
   <meta property="og:title" content="Salem Elatrash | Software, AI and data">
-  <meta property="og:description" content="Explore the projects, engineering decisions and learning behind my work.">
+  <meta property="og:description" content="Assistant S, Scribevo, Teist and Reunio: AI software I designed, built and shipped.">
   <meta property="og:image" content="https://slooma951.github.io/portfolio/assets/social.png">
   <meta property="og:url" content="https://slooma951.github.io/portfolio/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#1648d8">
+  <meta name="theme-color" content="#000000">
   <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="css/refresh.css">
-  <script src="js/refresh.js" defer></script>
+  <link rel="preload" href="fonts/lexend-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header wrap">
-  <a class="wordmark" href="#main" aria-label="Salem Elatrash home">Salem Elatrash<span>Software / AI / Data</span></a>
-  <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#background">Background</a><a href="#contact">Contact</a></nav>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top"><span class="brand-orb" aria-hidden="true"></span>Salem Elatrash</a>
+  <nav aria-label="Main">
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a class="nav-cta" href="#contact">Contact</a>
+  </nav>
 </header>
+
 <main id="main">
-  <section class="hero wrap" aria-labelledby="intro-title">
-    <div class="hero-copy"><p class="location">Dublin, Ireland</p>
-      <h1 id="intro-title">Curiosity.<br>Code.<br>Something useful.</h1>
-      <p class="intro">I’m Salem, a Computing graduate and MSc Data Analytics student. I build software around the things I want to make easier, from writing support to a personal AI workspace.</p>
-      <div class="actions"><a class="button primary" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a class="button" href="downloads/Salem_Elatrash_Public_CV.pdf">View my CV <span aria-hidden="true">↗</span></a></div>
-      <p class="hero-note">Interested in software engineering, applied AI and technology opportunities.</p>
+  <section class="hero" aria-labelledby="hero-title">
+    <canvas class="orb" aria-hidden="true"></canvas>
+    <div class="hero-copy">
+      <p class="hero-kicker"><span class="live-dot" aria-hidden="true"></span>Dublin, open to graduate roles for 2027</p>
+      <h1 id="hero-title"><span class="line"><span>Salem</span></span><span class="line"><span>Elatrash</span></span></h1>
+      <p class="hero-lede">I build AI software people can talk to, study with and write with. Then I ship it.</p>
+      <p class="hero-sub">Computing graduate from TU Dublin, now doing an MSc in Data Analytics at the National College of Ireland. Python, JavaScript and applied AI, from research to a published product.</p>
+      <div class="hero-actions">
+        <a class="btn btn-chrome" href="#work">See my projects</a>
+        <a class="btn btn-ghost" href="downloads/Salem_Elatrash_Public_CV.pdf">Download CV</a>
+      </div>
     </div>
-    <div class="hero-board" aria-label="A closer look at my work">
-      <div class="board-top"><span>On my desk</span><span class="board-mark" aria-hidden="true">+</span></div>
-      <a class="board-image" href="case-studies/assistant-s.html"><img src="assets/assistant-s-preview.png" width="1280" height="1000" alt="Earlier Assistant S interface with an animated desktop companion"><span>Explore Assistant S <span aria-hidden="true">↗</span></span></a>
-      <div class="board-caption"><strong>A personal assistant, built over time.</strong><p>Desktop tools, conversation and memory. Historical screenshot; the project has continued to evolve.</p></div>
-      <div class="board-foot"><span>Python</span><span>JavaScript</span><span>Applied AI</span></div>
+    <a class="scroll-cue" href="#proof" aria-label="Scroll to highlights"><span></span></a>
+  </section>
+
+  <section class="proof" id="proof" aria-label="Highlights">
+    <div class="wrap proof-grid">
+      <div><strong>Published</strong><span>Scribevo is live on the Chrome Web Store</span></div>
+      <div><strong>Selected</strong><span>for Citi upStart 2026 with my startup team, Teist</span></div>
+      <div><strong>22% to 3%</strong><span>harmful edits after my fix, on a 200-example benchmark</span></div>
+      <div><strong>6,571</strong><span>text pairs I assembled to fine-tune a T5 model</span></div>
     </div>
   </section>
-  <section id="work" class="work wrap" aria-labelledby="work-title">
-    <div class="section-head"><div><p class="section-label">Selected projects</p><h2 id="work-title">Ideas I’ve put to work.</h2></div><p>What I built, why it matters,<br>and what still needs work.</p></div>
-    <div class="filters" role="group" aria-label="Filter projects" hidden><button type="button" data-filter="all" aria-pressed="true">All projects</button><button type="button" data-filter="ai" aria-pressed="false">AI &amp; data</button><button type="button" data-filter="software" aria-pressed="false">Software</button><button type="button" data-filter="team" aria-pressed="false">Team projects</button></div>
-    <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
-    <div class="projects">
-      <article class="project" data-categories="ai software">
-        <a class="project-image assistant" href="case-studies/assistant-s.html" aria-label="Read the Assistant S case study"><img src="assets/assistant-s-preview.png" width="1280" height="1000" loading="lazy" alt="Historical Assistant S desktop workspace and companion"></a>
-        <div class="project-meta"><span>Personal project</span><span>In development</span></div><h3>Assistant S</h3><p>A personal AI workspace for conversation, study and desktop tools. I’m exploring useful memory, local processing and control over how the assistant works.</p><p class="tech">Python · JavaScript · Electron · AI integrations</p><p class="limit">A low-power, fully offline S model is a future goal, not a completed trained model.</p><div class="project-links"><a href="case-studies/assistant-s.html">Read the case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Slooma951/Assistant-S-Showcase">GitHub showcase</a></div>
+
+  <section class="work" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <h2 class="section-title" id="work-title">Things I've built</h2>
+      <p class="section-intro">Four projects, each built around a real problem. Most come with a live product, a demo or code you can inspect.</p>
+    </div>
+
+    <article class="flagship" aria-labelledby="s-title">
+      <div class="wrap flagship-grid">
+        <div class="flagship-copy reveal">
+          <p class="tag">Flagship project, ongoing</p>
+          <h3 id="s-title">Assistant S</h3>
+          <p class="pitch">My own AI assistant, built from scratch. Talk to it or type, hand it several jobs at once, and it gets on with them side by side.</p>
+          <ul class="points">
+            <li>Routes each request to Claude, ChatGPT, Grok or Gemini, and switches provider when one hits a usage limit</li>
+            <li>Optional local model through Ollama, so simple questions can stay on my machine</li>
+            <li>Study workspace that pulls my NCI lectures from Moodle and quizzes me on them</li>
+            <li>Local memory with sources and corrections, and a voice orb that reacts when S listens, speaks or works</li>
+          </ul>
+          <p class="next">Where it's going: S's own model, running locally and offline on modest hardware.</p>
+          <p class="stack">Electron, Node.js, Three.js, Vite, WebSockets, SQLite, Python speech</p>
+          <div class="links">
+            <a class="btn btn-chrome" href="case-studies/assistant-s.html">Read the case study</a>
+            <a class="btn btn-ghost" href="https://github.com/Slooma951/Assistant-S-Showcase">GitHub showcase</a>
+          </div>
+        </div>
+        <figure class="device reveal" data-switcher>
+          <div class="device-bar" role="tablist" aria-label="Assistant S screens">
+            <button role="tab" aria-selected="true" aria-controls="s-shot" data-shot="0">Home</button>
+            <button role="tab" aria-selected="false" aria-controls="s-shot" data-shot="1">Chat</button>
+            <button role="tab" aria-selected="false" aria-controls="s-shot" data-shot="2">Study</button>
+          </div>
+          <div class="device-screen" id="s-shot" role="tabpanel">
+            <img class="is-on" src="assets/assistant-s-home.webp" width="1600" height="1000" alt="Assistant S home screen: a chrome voice orb above a dock with Chat, Work, Study, Create, Tasks, Tools and Settings">
+            <img src="assets/assistant-s-chat.webp" width="1600" height="1000" loading="lazy" alt="Assistant S chat screen with topic tabs for emails, jobs, calendar, studying and more">
+            <img src="assets/assistant-s-study.webp" width="1600" height="1000" loading="lazy" alt="Assistant S study workspace listing NCI lectures by module">
+          </div>
+          <figcaption>Screenshots of the current build, November 2026</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <div class="wrap projects">
+      <article class="project reveal" aria-labelledby="scribevo-title">
+        <div class="project-media">
+          <img src="assets/scribevo-preview.png" width="1280" height="800" loading="lazy" alt="Scribevo suggesting a spelling correction that the writer can accept or dismiss">
+        </div>
+        <div class="project-copy">
+          <p class="tag">Published product</p>
+          <h3 id="scribevo-title">Scribevo</h3>
+          <p class="pitch">Spelling help for dyslexic students that never rewrites their work.</p>
+          <p>Universities increasingly treat tools like Grammarly as generative AI, which can leave dyslexic students choosing between support and academic rules. Scribevo only corrects the sentence the student wrote, and nothing changes until they accept it. It started as WordFlow, my TU Dublin final-year research project.</p>
+          <ul class="points">
+            <li>Published Chrome extension backed by a Python FastAPI service, packaged in Docker with GitHub Actions CI</li>
+            <li>Fine-tuned a T5 research model with PyTorch and Hugging Face on 6,571 text pairs, evaluated in four participant sessions</li>
+            <li>Cut harmful edits from 22% to 3% on a 200-example offline benchmark</li>
+            <li>Presented to TU Dublin's Disability Support Service</li>
+          </ul>
+          <p class="stack">JavaScript, Python, FastAPI, PyTorch, Transformers, Docker</p>
+          <div class="links">
+            <a class="btn btn-chrome" href="https://chromewebstore.google.com/detail/pfpakhloamdgoiokaljdfhpgkbanccci">Get it on the Chrome Web Store</a>
+            <a class="btn btn-ghost" href="case-studies/scribevo.html">Case study</a>
+          </div>
+        </div>
       </article>
-      <article class="project" data-categories="ai software">
-        <a class="project-image scribevo" href="case-studies/scribevo.html" aria-label="Read the Scribevo case study"><img src="assets/scribevo-preview.png" width="1280" height="800" loading="lazy" alt="Prepared Scribevo example showing a correction the writer can review"></a>
-        <div class="project-meta"><span>From final-year research</span><span>Published extension</span></div><h3>Scribevo</h3><p>Writing support for dyslexic spelling, developed from my WordFlow research project. A Chrome extension connects to a Python API and lets the writer review each suggestion.</p><p class="tech">JavaScript · FastAPI · Python · PyTorch · Transformers</p><p class="limit">The research prototype and the current product have different evaluation results.</p><div class="project-links"><a href="case-studies/scribevo.html">Read the case study <span aria-hidden="true">↗</span></a><a href="https://chromewebstore.google.com/detail/pfpakhloamdgoiokaljdfhpgkbanccci">Chrome Web Store</a><a href="https://github.com/Slooma951/Scribevo">GitHub</a></div>
+
+      <article class="project reveal" aria-labelledby="teist-title">
+        <div class="project-media spec" aria-hidden="true">
+          <div class="spec-card">
+            <span class="spec-top">Teist</span>
+            <span class="spec-big">Citi upStart 2026</span>
+            <span class="spec-row"><b>Model</b>IBM Granite 8B</span>
+            <span class="spec-row"><b>Runtime</b>llama.cpp, fully offline</span>
+            <span class="spec-row"><b>Platform</b>Next.js and FastAPI</span>
+          </div>
+        </div>
+        <div class="project-copy">
+          <p class="tag">Startup, team of two</p>
+          <h3 id="teist-title">Teist</h3>
+          <p class="pitch">An AI supplier-assurance agent for banks, selected for Citi upStart 2026.</p>
+          <p>Banks have to check that the suppliers they rely on meet their standards, and much of that review is slow and manual. Daniel and I are building Teist to speed it up while keeping sensitive documents in-house.</p>
+          <ul class="points">
+            <li>I built the local AI: IBM Granite 8B running offline through llama.cpp, so documents never leave the machine</li>
+            <li>I designed and built the web interface</li>
+            <li>I led research with people working in banking to shape the product</li>
+          </ul>
+          <p class="note">Tested on fictional data so far. Source is private while the programme runs.</p>
+          <p class="stack">Python, TypeScript, Next.js, FastAPI, llama.cpp</p>
+        </div>
       </article>
-      <article class="project" data-categories="ai software">
-        <a class="project-image reunio" href="case-studies/reunio.html" aria-label="Read the Reunio case study"><img src="assets/reunio-preview.png" width="2560" height="1600" loading="lazy" alt="Reunio prototype in a phone frame with sample lost-property records"></a>
-        <div class="project-meta"><span>Lost property</span><span>Working prototype</span></div><h3>Reunio</h3><p>A lost-property app for front desks. Staff log found items, review explained matches to lost reports and check ownership before recording a return.</p><p class="tech">TypeScript · React Native · Expo · On-device inference</p><p class="limit">The public demo uses example data. A real front-desk pilot has not been established.</p><div class="project-links"><a href="case-studies/reunio.html">Read the case study <span aria-hidden="true">↗</span></a><a href="https://slooma951.github.io/reunio-demo/">Try the demo</a><a href="https://github.com/Slooma951/Reunio">GitHub</a></div>
-      </article>
-      <article class="project" data-categories="software team">
-        <a class="project-image dvs" href="case-studies/dvs-note.html" aria-label="Read the DVS Note case study"><img src="assets/dvs-flow.svg" width="1200" height="800" loading="lazy" alt="DVS Note concept diagram connecting notes, tasks, journals and reflection"></a>
-        <div class="project-meta"><span>TU Dublin team project</span><span>Academic archive</span></div><h3>DVS Note</h3><p>A productivity and reflection application built with two fellow students. The project brings notes, tasks, journals and mood views into one workspace.</p><p class="tech">React · Next.js · Material UI · MongoDB</p><p class="limit">A team contribution, preserved as academic work rather than a current hosted product.</p><div class="project-links"><a href="case-studies/dvs-note.html">Read the case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Slooma951/Major-Group-Project">Team repository</a></div>
+
+      <article class="project reveal" aria-labelledby="reunio-title">
+        <div class="project-media">
+          <img src="assets/reunio-preview.png" width="2560" height="1600" loading="lazy" alt="Reunio demo showing logged lost items with sample data">
+        </div>
+        <div class="project-copy">
+          <p class="tag">Working prototype</p>
+          <h3 id="reunio-title">Reunio</h3>
+          <p class="pitch">Getting lost property back to its owner, with staff checking every return.</p>
+          <p>Dublin Airport reported around 19,000 lost items in 2024, with 56% returned. Reunio helps front desks log items, find likely matches and confirm ownership before anything is handed over.</p>
+          <ul class="points">
+            <li>Mobile app in TypeScript, React Native and Expo for records, search and returns</li>
+            <li>FastAPI and PostgreSQL backend prototype with server-verified JWT identity, tenant-scoped access and row-level security</li>
+            <li>Tests covering matching, returns and data retention</li>
+          </ul>
+          <p class="stack">TypeScript, React Native, Expo, FastAPI, PostgreSQL</p>
+          <div class="links">
+            <a class="btn btn-chrome" href="https://slooma951.github.io/reunio-demo/">Try the live demo</a>
+            <a class="btn btn-ghost" href="case-studies/reunio.html">Case study</a>
+          </div>
+        </div>
       </article>
     </div>
+
+    <div class="wrap more">
+      <h3 class="more-title">More I've built</h3>
+      <div class="more-grid">
+        <a class="more-item reveal" href="case-studies/dvs-note.html">
+          <strong>DVS Note</strong>
+          <span>TU Dublin team project with Daniel Aigbe and Adefolajuwon Adeniran: notes, tasks, journaling and mood tracking in one app. Next.js, React and MongoDB.</span>
+        </a>
+        <div class="more-item reveal">
+          <strong>S Music</strong>
+          <span>A native iPhone music player built in SwiftUI, part of my S apps, with an automated build pipeline on GitHub Actions.</span>
+        </div>
+        <div class="more-item reveal">
+          <strong>Duo Work</strong>
+          <span>A Windows desktop app for a two-person business, shipped through GitHub releases with signed automatic updates.</span>
+        </div>
+      </div>
+    </div>
   </section>
-  <section id="about" class="about" aria-labelledby="about-title"><div class="wrap about-grid"><div><p class="section-label">A little about me</p><h2 id="about-title">I like knowing<br>how things work.<br>Then making them.</h2></div><div class="about-copy"><p>I’m a Dublin-based developer with a BSc (Honours) in Computing (Information Technology) from TU Dublin. I’m now studying for an MSc in Data Analytics at the National College of Ireland.</p><p>My work sits between software engineering and applied AI. I enjoy the whole process: understanding a problem, building something people can try, testing what breaks and improving it.</p><p>I also enjoy explaining technical ideas, whether that means helping someone troubleshoot a server or teaching a child their first lines of code.</p><a class="text-link" href="https://www.linkedin.com/in/salem-elatrash/">Connect on LinkedIn <span aria-hidden="true">↗</span></a></div></div></section>
-  <section id="skills" class="skills wrap" aria-labelledby="skills-title"><div class="section-head"><div><p class="section-label">My toolkit</p><h2 id="skills-title">Tools behind the work.</h2></div><p>Built through projects,<br>coursework and practice.</p></div><div class="skill-grid"><div><h3>Software</h3><p>Python, JavaScript, TypeScript, SQL, Lua, HTML and CSS.</p><p>FastAPI, React Native, Expo, REST APIs, PostgreSQL and MySQL.</p></div><div><h3>Data &amp; machine learning</h3><p>pandas, NumPy, PyTorch and Hugging Face Transformers.</p><p>Dataset preparation, natural language processing and model evaluation.</p></div><div><h3>Engineering practice</h3><p>Git, GitHub Actions, Docker, Linux and pytest.</p><p>Regression testing, debugging, documentation and accessible interfaces.</p></div></div></section>
-  <section id="background" class="background wrap" aria-labelledby="background-title"><div class="section-head"><div><p class="section-label">Learning &amp; experience</p><h2 id="background-title">The path so far.</h2></div><a class="text-link" href="downloads/Salem_Elatrash_Public_CV.pdf">Open public CV <span aria-hidden="true">↗</span></a></div><div class="background-grid"><div><h3 class="column-title">Education</h3><div class="timeline-item"><p class="date">September 2026 to August 2027, expected</p><h4>MSc Data Analytics</h4><p>National College of Ireland</p><p class="muted">Current study includes machine learning, statistics, data visualisation and data governance.</p></div><div class="timeline-item"><p class="date">Completed June 2026</p><h4>BSc (Honours) Computing<br>(Information Technology)</h4><p>TU Dublin</p><p class="muted">Software engineering, algorithms, databases, testing and operating systems.</p></div><div class="certificate"><p class="date">Certificate of completion · 15 November 2026</p><h4>Introduction to Python</h4><p>DataCamp</p></div></div><div><h3 class="column-title">Experience</h3><div class="timeline-item"><p class="date">January to October 2025</p><h4>Volunteer Developer &amp; Technical Support</h4><p>Developed Lua and JavaScript gaming-server scripts, reproduced faults and helped users troubleshoot issues.</p></div><div class="timeline-item"><p class="date">Through June 2026</p><h4>Volunteer Student Ambassador</h4><p>TU Dublin</p><p class="muted">Taught children HTML, CSS, JavaScript and Python at a coding camp, and explained Computing courses at open days.</p></div><div class="timeline-item"><p class="date">October 2025 to January 2026</p><h4>Seasonal Peak Assistant</h4><p>An Post, Dublin</p><p class="muted">Sorted mail and parcels during the Christmas peak, following accuracy and safety procedures.</p></div></div></div></section>
-  <section class="more-work wrap" aria-labelledby="more-title"><h2 id="more-title">Still exploring.</h2><p>Not every experiment is a finished product. Alongside the projects above, I’ve worked on S Music, including simulator-based validation. Physical-device validation remains to do.</p><a class="text-link" href="https://github.com/Slooma951">Browse my public GitHub work <span aria-hidden="true">↗</span></a></section>
-  <section id="contact" class="contact" aria-labelledby="contact-title"><div class="wrap contact-grid"><div><p class="section-label">Let’s talk</p><h2 id="contact-title">Have something<br>worth building?</h2><p>I’d be happy to discuss my projects, how I work or a technology opportunity.</p></div><div class="contact-links"><a href="mailto:slooma620@gmail.com">slooma620@gmail.com <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/salem-elatrash/">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/Slooma951">GitHub <span aria-hidden="true">↗</span></a><a href="downloads/Salem_Elatrash_Public_CV.pdf">Public CV <span aria-hidden="true">↗</span></a></div></div></section>
+
+  <section class="experience" id="experience" aria-labelledby="exp-title">
+    <div class="wrap two-col">
+      <h2 class="section-title" id="exp-title">Experience</h2>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="when">2026, ongoing</span>
+          <h3>Co-founder and engineer, Teist</h3>
+          <p class="where">Citi upStart 2026 startup programme</p>
+          <p>Building the offline AI and web interface for a supplier-assurance product, and researching the problem with people in banking.</p>
+        </li>
+        <li class="reveal">
+          <span class="when">Apr 2023 to Jun 2026</span>
+          <h3>Student Ambassador</h3>
+          <p class="where">TU Dublin</p>
+          <p>Taught children HTML, CSS, JavaScript and Python at coding camps, and presented Computing courses to prospective students at open days.</p>
+        </li>
+        <li class="reveal">
+          <span class="when">Oct 2025 to Jan 2026</span>
+          <h3>Seasonal Peak Assistant</h3>
+          <p class="where">An Post, Dublin</p>
+          <p>Sorted mail and parcels through the Christmas peak, working to accuracy and safety procedures under time pressure.</p>
+        </li>
+        <li class="reveal">
+          <span class="when">Jan to Oct 2025</span>
+          <h3>Volunteer Developer and Technical Support</h3>
+          <p class="where">Online gaming community</p>
+          <p>Wrote server scripts in Lua and JavaScript, and fixed problems by reproducing faults and documenting them.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="education" id="education" aria-labelledby="edu-title">
+    <div class="wrap two-col">
+      <h2 class="section-title" id="edu-title">Education</h2>
+      <div class="edu-list">
+        <div class="edu reveal">
+          <span class="when">Sep 2026 to Aug 2027</span>
+          <h3>MSc Data Analytics</h3>
+          <p class="where">National College of Ireland, in progress</p>
+          <p>Statistics and Optimisation; Data Mining and Machine Learning; Analytics Programming and Data Visualisation; Data Governance, Ethics and Sustainability.</p>
+        </div>
+        <div class="edu reveal">
+          <span class="when">2022 to 2026</span>
+          <h3>BSc (Hons) Computing, Information Technology</h3>
+          <p class="where">TU Dublin, graduated 2026</p>
+          <p>Data Structures and Algorithms; Databases and SQL; Software Engineering; Software Testing; Operating Systems. Final-year research project: WordFlow, which became Scribevo.</p>
+        </div>
+        <div class="edu cert reveal">
+          <span class="when">Nov 2026</span>
+          <h3>Introduction to Python</h3>
+          <p class="where">DataCamp, certificate of completion</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills" aria-labelledby="skills-title">
+    <div class="wrap">
+      <h2 class="section-title" id="skills-title">What I work with</h2>
+      <div class="skill-groups">
+        <div class="reveal"><h3>Languages</h3><ul><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li><li>Java</li><li>C</li><li>C++</li><li>Rust</li><li>Lua</li></ul></div>
+        <div class="reveal"><h3>AI and data</h3><ul><li>PyTorch</li><li>Hugging Face Transformers</li><li>NLP</li><li>Local LLMs (Ollama, llama.cpp)</li><li>Model evaluation</li><li>pandas</li><li>NumPy</li></ul></div>
+        <div class="reveal"><h3>Building</h3><ul><li>FastAPI</li><li>Flask</li><li>React</li><li>React Native</li><li>Expo</li><li>Electron</li><li>Next.js</li><li>Three.js</li><li>PostgreSQL</li><li>MySQL</li></ul></div>
+        <div class="reveal"><h3>Shipping</h3><ul><li>Git</li><li>GitHub Actions CI</li><li>Docker</li><li>pytest</li><li>Regression testing</li><li>Linux</li></ul></div>
+        <div class="reveal"><h3>Spoken</h3><ul><li>English</li><li>Arabic</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-inner">
+      <h2 id="contact-title">Let's build something.</h2>
+      <p>I'm looking for graduate software engineering, AI and data roles for 2027, and internships before then. The quickest way to reach me is email or LinkedIn.</p>
+      <a class="contact-mail" href="mailto:slooma620@gmail.com">slooma620@gmail.com</a>
+      <div class="links">
+        <a class="btn btn-chrome" href="https://www.linkedin.com/in/salem-elatrash/">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/Slooma951">GitHub</a>
+        <a class="btn btn-ghost" href="downloads/Salem_Elatrash_Public_CV.pdf">CV (PDF)</a>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="wrap site-footer"><span>© 2026 Salem Elatrash</span><div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="#main">Back to top ↑</a></div></footer>
+
+<footer class="footer wrap">
+  <span>© 2026 Salem Elatrash. Built by hand, no frameworks.</span>
+  <span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></span>
+</footer>
 </body>
 </html>

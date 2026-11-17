@@ -4,13 +4,11 @@ Salem Elatrash’s personal portfolio for software engineering, applied AI and d
 
 [Visit the current portfolio](https://slooma951.github.io/portfolio/)
 
-## This refresh
+## This version (November 2026)
 
-A bright white, cobalt and pale-blue design with real project screenshots, responsive navigation, filterable project stories, education, experience, skills and contact links. Filters progressively enhance a page that remains complete without JavaScript. Motion is restrained and respects reduced-motion preferences. No framework, external fonts, analytics or runtime dependencies are required.
+A dark, chrome-and-iridescent design built around Assistant S's voice orb. The hero orb is drawn live on a canvas: it breathes, bulges toward the pointer and pauses when off screen or when reduced motion is requested. Projects (Assistant S, Scribevo, Teist, Reunio and smaller work), experience, education, certificates, skills and contact details come from the current CV and verified records. The Assistant S screenshots are from the current build, captured from a clean state.
 
-The homepage includes Assistant S, Scribevo, Reunio and DVS Note, with clear distinctions between ongoing development, published work, prototypes and academic archives. Education and experience are based on the current CV. The DataCamp Introduction to Python completion is dated 15 November 2026. No unverified certifications, customers or outcomes are claimed.
-
-The public CV download is retained. It omits private phone and student contact details. Product screenshots are presentation evidence, not current adoption figures. The Assistant S screenshot is historical and labelled accordingly.
+Hand-written HTML, CSS and JavaScript. No frameworks, trackers or external requests; the Lexend font is self-hosted under the SIL Open Font Licence.
 
 ## Repository and compatibility
 
@@ -24,7 +22,7 @@ This repository contains static portfolio pages and public project explanations,
 python -m http.server 8000
 ```
 
-Open `http://localhost:8000/`. There is no installation or build step. The homepage uses `css/refresh.css` and `js/refresh.js`. Original styles, scripts, case-study routes, legal pages and assets are retained. `build_content.py` is a historical generator: do not run it over hand-maintained pages without reviewing its output, because it can restore older project descriptions.
+Open `http://localhost:8000/`. There is no installation or build step. The homepage uses `css/main.css` and `js/main.js`; case-study pages keep `css/home.css`. Original styles, scripts, case-study routes, legal pages and assets are retained. `build_content.py` is a historical generator: do not run it over hand-maintained pages without reviewing its output, because it can restore older project descriptions.
 
 ## Verification and publication
 

@@ -1,2 +1,2 @@
-// Keep retained portfolio reading pages consistent with the light homepage.
-document.documentElement.dataset.theme = "light";
+// The portfolio uses one fixed appearance on every page.
+document.documentElement.dataset.theme = "dark";
