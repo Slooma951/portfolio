@@ -1,29 +1,31 @@
-# Salem Elatrash · Portfolio
+# Portfolio Website
 
-Software engineering, applied AI and data projects, presented through clear public case studies.
+Salem Elatrash’s personal portfolio for software engineering, applied AI and data work.
 
-**[Visit the portfolio](https://slooma951.github.io/portfolio/)**
+[Visit the current portfolio](https://slooma951.github.io/portfolio/)
 
-![Portfolio preview](assets/social.png)
+## This refresh
 
-| Project | What it explores | Read more |
-| --- | --- | --- |
-| **Scribevo** (original research name: WordFlow) | Writing support for dyslexic students, NLP and a reviewable correction interface | [Case study](https://slooma951.github.io/portfolio/case-studies/scribevo.html) · [Public overview](https://github.com/Slooma951/Scribevo) |
-| **Assistant S** | An Electron desktop workspace with an animated companion | [Case study](https://slooma951.github.io/portfolio/case-studies/assistant-s.html) |
-| **Reunio** | Lost-property logging, matching and checked returns for front desks | [Case study](https://slooma951.github.io/portfolio/case-studies/reunio.html) |
+A bright white, cobalt and pale-blue design with real project screenshots, responsive navigation, filterable project stories, education, experience, skills and contact links. Filters progressively enhance a page that remains complete without JavaScript. Motion is restrained and respects reduced-motion preferences. No framework, external fonts, analytics or runtime dependencies are required.
 
-## Design
+The homepage includes Assistant S, Scribevo, Reunio and DVS Note, with clear distinctions between ongoing development, published work, prototypes and academic archives. Education and experience are based on the current CV. The DataCamp Introduction to Python completion is dated 15 November 2026. No unverified certifications, customers or outcomes are claimed.
 
-A centred typed name, fixed black/white/lavender cosmic palette, iOS-style buttons, animated SVG skill icons and a swipeable project carousel. The three selected projects are Assistant S, Scribevo and Reunio, shown with product pictures and View more links opening dedicated pages in new tabs. Keyboard controls, hidden-slide focus protection and reduced-motion preferences are supported. The downloadable public CV omits phone and student email. Project illustrations make no network requests.
+The public CV download is retained. It omits private phone and student contact details. Product screenshots are presentation evidence, not current adoption figures. The Assistant S screenshot is historical and labelled accordingly.
 
-## Public and private material
+## Repository and compatibility
 
-This repository contains the static portfolio and public project descriptions. It does not contain the private implementation of Scribevo or Assistant S. Those descriptions communicate the problem, approach, contribution and evaluation limits. They do not include credentials, private conversations, datasets or trained artefacts.
+The existing repository slug remains **portfolio**, preserving its published GitHub Pages address and incoming links. The separate **projectweb** repository preserves historical Scribevo support and privacy URLs. Renaming either repository needs a compatibility review before any live change.
 
-The repository is named **portfolio**. A separate minimal compatibility repository at `projectweb` preserves the old support and privacy links used by the published Scribevo listing.
+This repository contains static portfolio pages and public project explanations, not the private implementation of Assistant S or Scribevo. Private data, credentials, datasets and model artefacts must remain excluded.
 
 ## Review locally
 
-Serve this folder with any static web server. No dependency installation or build step is required for the site. `build_content.py` regenerates the original written case studies and conceptual diagrams. The Reunio page is maintained directly in `case-studies/reunio.html`.
+```sh
+python -m http.server 8000
+```
 
-Project status and measured results are dated. See each case study for limitations rather than treating historical results as current product guarantees.
+Open `http://localhost:8000/`. There is no installation or build step. The homepage uses `css/refresh.css` and `js/refresh.js`. Original styles, scripts, case-study routes, legal pages and assets are retained. `build_content.py` is a historical generator: do not run it over hand-maintained pages without reviewing its output, because it can restore older project descriptions.
+
+## Verification and publication
+
+Review desktop and mobile layouts, keyboard navigation, project filters, no-JavaScript behavior, reduced-motion preferences, local links and metadata before publication. A local branch is a review preview, not a deployed update. Publishing, repository renaming and hosting/settings changes require Salem’s approval.

@@ -894,3 +894,24 @@ html[data-theme="dark"] .demo-controls button:first-child {
     padding: 18px;
   }
 }
+
+/* Portfolio refresh: shared reading-page palette, without changing product support pages. */
+html[data-theme="light"] body, body {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #152039;
+  --muted: #52617b;
+  --line: #d9e1ef;
+  --blue: #1648d8;
+  --soft: #eaf1ff;
+}
+.reading h1 { color: var(--blue); }
+.reading .eyebrow { text-transform: none; letter-spacing: normal; font-size: 14px; }
+.reading .back { color: var(--blue); }
+.reading .button { border-radius: 6px; }
+
+.reading .project-evidence { border-color:var(--line); border-radius:6px; background:var(--soft); }
+.reading .evidence-grid a { border-color:var(--line); border-radius:6px; background:var(--surface); color:var(--text); }
+.reading .evidence-grid a:hover { border-color:var(--blue); }
+.reading .evidence-label { color:var(--blue); letter-spacing:normal; text-transform:none; }
+.reading .evidence-grid span:last-child,.reading .evidence-limit { color:var(--muted); }

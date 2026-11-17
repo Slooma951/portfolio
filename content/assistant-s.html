@@ -1,0 +1,31 @@
+<p class="intro">A personal desktop assistant for study, AI conversations and practical computer tasks. Built with Electron, a JavaScript interface and a local Node.js service.</p>
+<div class="actions"><a class="button primary" href="https://github.com/Slooma951/Assistant-S-Showcase">Explore the engineering</a><a class="button" href="https://github.com/Slooma951/Assistant-S-Showcase/tree/main/examples">Read the public code example</a></div>
+<h2>Why I am building S</h2>
+<p>I wanted an assistant I could study with, talk to and use to carry out useful tasks on my computer. The aim is to get as much useful AI capability as possible while keeping usage down, rather than sending every small action to a model.</p>
+<p>My longer-term goal is my own capable S model, developed toward a broad set of professional features that can run locally and offline with modest resource use. That is an ambition, not a completed result. The current implementation retrieves saved lessons as context. It does not train model weights, and fully featured offline operation and low-power performance have not been demonstrated.</p>
+<h2>What is in the current implementation</h2>
+<p>The source includes typed and spoken conversations, study modules and planning, local memory, provider routing, browser tasks, career documents, habits, calendar, code and activity workspaces. The current home screen is a voice-reactive Three.js shape. Account connections, installed models and device permissions determine which features are available on each computer.</p>
+<figure><img class="diagram" src="../assets/assistant-s-preview.png" alt="Historical Assistant S interface with an animated companion in a room." width="1440" loading="lazy"><figcaption>Earlier room interface, retained to show the project's evolution. This is not a screenshot of the current version.</figcaption></figure>
+<h2>How the architecture works</h2>
+<ol>
+<li>The Electron interface sends a request to an authenticated local HTTP and WebSocket service.</li>
+<li>A rule-based router classifies the task and checks provider readiness and saved usage-limit cooldowns.</li>
+<li>The engine adds relevant local memory and bounded conversation context. Simple local actions and cached answers can avoid another model call.</li>
+<li>Provider adapters connect to Codex, Claude, Grok and Gemini. An optional Ollama route handles ordinary text questions; it is excluded from tasks requiring files, web or connector tools.</li>
+<li>Results return to the interface. Browser actions that may commit changes have review controls.</li>
+</ol>
+<p>The local service binds to loopback and applies token, Host and Origin checks. These are source-visible controls, not a claim that the whole product has passed a security audit. Cloud providers and connected services still require network access.</p>
+<h2>Technology and engineering decisions</h2>
+<p>JavaScript and Node.js handle orchestration and the local service. Electron, HTML and CSS provide the desktop shell and workspaces; Vite bundles the interface, and Three.js renders the scene. Python supports an optional Chatterbox speech service. SQLite and Markdown support memory, while Git and Node's test runner support development and regression checks.</p>
+<p>Assistant S integrates existing AI models. It is not a foundation model built from scratch, and an available adapter does not mean its provider account is currently signed in. AI coding assistance has been used during development and review.</p>
+<h2>Challenges and what the work taught me</h2>
+<dl>
+<dt>Windows launch contexts</dt><dd>Settings and sign-ins could resolve to different AppData locations. Home-folder storage and migration handling address that difference. Desktop behavior needs checking from the ways the app is actually launched.</dd>
+<dt>Provider limits and failures</dt><dd>Readiness checks, persistent cooldowns and alternate routes preserve useful work when a provider is unavailable. A fallback should carry the original task forward and report failures honestly.</dd>
+<dt>Voice, rendering and local inference</dt><dd>Microphone recovery, restrained rendering and reduced-motion behavior share a limited device budget. Claims about responsiveness or power use need measurements on the target hardware.</dd>
+<dt>Useful memory</dt><dd>Filtering unsuitable lesson fragments and retaining provenance makes retrieved context more useful. Persistence alone does not make a model better or a remembered fact current.</dd>
+</dl>
+<h2>Evidence and next steps</h2>
+<p>The public showcase contains a runnable JavaScript interface-state example with synthetic inputs. Its eight tests passed on 17 November 2026. Those checks cover that isolated example, not the current complete application, voice pipeline or external integrations.</p>
+<p>Next work includes evaluating local-model capabilities, measuring offline coverage and resource use, improving connection diagnostics, strengthening integration checks and adding current screenshots from a safe demonstration state. These are development directions, not promised release dates.</p>
+<p><a href="https://github.com/Slooma951/Assistant-S-Showcase/blob/main/evidence/CURRENT-ARCHITECTURE.md">Read the dated architecture evidence and verification limits</a>. Full source, conversations, credentials, account profiles and model files remain private.</p>
